@@ -14,12 +14,10 @@ export default class Ex3 extends Component<object, State> {
     };
   }
 
-  // Nếu không import riêng ChangeEvent thì phải viết React.ChangeEvent
   handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ birth: e.target.value });
   };
 
-  // Nếu không import riêng FormEvent thì phải viết React.FormEvent
   handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.setState({ submitted: this.state.birth });
